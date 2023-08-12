@@ -1,0 +1,19 @@
+{
+  "name": "demo-automation-testing-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:debug": "npx playwright test --debug",
+    "test:codegen": "npx playwright codegen",
+    "test:ui": "npx playwright test --ui",
+    "test": "npx playwright test --project=chromium --headed",
+    "test:inspect": "PWDEBUG=1 npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2"
+  }
+}
