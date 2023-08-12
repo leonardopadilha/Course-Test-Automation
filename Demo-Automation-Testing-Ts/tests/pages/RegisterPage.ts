@@ -45,4 +45,8 @@ export class RegisterPage {
         await this.emailAdress.type(email)
     }
 
+    async fillPhone(phone: string) {
+        await this.phone.type(phone)
+    }
+
 }

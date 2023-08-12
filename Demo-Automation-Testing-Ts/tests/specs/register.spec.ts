@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { RegisterPage } from "../pages/RegisterPage";
+
 import user from "../fixtures/person";
 import message from "../fixtures/adress"
 
@@ -15,6 +16,7 @@ test.describe('Register', () => {
         await registerPage.fillFullName(user.FIRST_NAME, user.LAST_NAME)
         await registerPage.fillAddress(message.success)
         await registerPage.fillEmail(user.EMAIL)
+        await registerPage.fillPhone(user.PHONE)
     })
 })
 
