@@ -8,7 +8,8 @@ export class RegisterPage {
     readonly Address: Locator;
     readonly emailAdress: Locator;
     readonly phone: Locator;
-    readonly gender: Locator;
+    readonly gender_male: Locator;
+    readonly gender_female: Locator;
     readonly hobbies: Locator;
     readonly languages: Locator;
     readonly skill: Locator;
@@ -18,6 +19,9 @@ export class RegisterPage {
     readonly dayOfBirth: Locator;
     readonly password: Locator;
     readonly confirmPassword: Locator;
+    readonly btnRefresh: Locator;
+    readonly btnSubmit: Locator;
+    readonly registerPageUrl: RegExp
 
     constructor(page: Page) {
         this.page = page
@@ -26,6 +30,13 @@ export class RegisterPage {
         this.Address =  page.locator(selector.ADDRESS);
         this.emailAdress =   page.locator(selector.EMAIL_ADDRESS);
         this.phone = page.locator(selector.PHONE);
+        this.gender_male = page.locator(selector.GENDER_MALE)
+        this.gender_female = page.locator(selector.GENDER_FEMALE)
+        this.btnRefresh = page.locator(selector.BTN_REFRESH)
+        this.btnSubmit = page.locator(selector.BTN_SUBMIT)
+        this.registerPageUrl = /.*Register.html/;
+
+
     }
 
     async pageAcess() {
@@ -47,6 +58,14 @@ export class RegisterPage {
 
     async fillPhone(phone: string) {
         await this.phone.type(phone)
+    }
+
+    async selectGender(gender: string) {
+        if (gender === 'M') {
+            await this.gender_male.click();
+        } else if (gender === 'F') {
+            await this.gender_female.click();
+        }
     }
 
 }

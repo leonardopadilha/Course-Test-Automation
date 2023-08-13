@@ -3,6 +3,7 @@ import { RegisterPage } from "../pages/RegisterPage";
 
 import user from "../fixtures/person";
 import message from "../fixtures/adress"
+import gender from "../fixtures/gender"
 
 let registerPage : RegisterPage;
 
@@ -17,6 +18,7 @@ test.describe('Register', () => {
         await registerPage.fillAddress(message.success)
         await registerPage.fillEmail(user.EMAIL)
         await registerPage.fillPhone(user.PHONE)
+        await registerPage.selectGender(gender.FEMALE)
     })
 })
 
