@@ -10,7 +10,9 @@ export class RegisterPage {
     readonly phone: Locator;
     readonly gender_male: Locator;
     readonly gender_female: Locator;
-    readonly hobbies: Locator;
+    readonly cricket: Locator;
+    readonly movies: Locator;
+    readonly hockey: Locator;
     readonly languages: Locator;
     readonly skill: Locator;
     readonly selectCountry: Locator;
@@ -32,11 +34,12 @@ export class RegisterPage {
         this.phone = page.locator(selector.PHONE);
         this.gender_male = page.locator(selector.GENDER_MALE)
         this.gender_female = page.locator(selector.GENDER_FEMALE)
+        this.cricket = page.locator(selector.CRICKET)
+        this.movies = page.locator(selector.MOVIES)
+        this.hockey = page.locator(selector.HOCKEY)
         this.btnRefresh = page.locator(selector.BTN_REFRESH)
         this.btnSubmit = page.locator(selector.BTN_SUBMIT)
         this.registerPageUrl = /.*Register.html/;
-
-
     }
 
     async pageAcess() {
@@ -68,4 +71,15 @@ export class RegisterPage {
         }
     }
 
+    async selectCricket() {
+        await this.cricket.click()
+    }
+
+    async selectMovies() {
+        await this.movies.click()
+    }
+
+    async selectHockey() {
+        await this.hockey.click()
+    }
 }

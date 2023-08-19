@@ -16,7 +16,7 @@ import { test, expect } from '@playwright/test';
 
 const MENSAGEM = 'Playwright is distributed as a set of'
 
-test.only('Check Java page', async ({ page }) => {
+test('Check Java page', async ({ page }) => {
     await page.goto('https://playwright.dev');
 
     await page.getByRole('link', { name: 'Get started '}).click();
