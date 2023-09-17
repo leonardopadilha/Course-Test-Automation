@@ -86,4 +86,8 @@ export class RegisterPage {
     async clickOnBtnRefresh() {
         await this.btnRefresh.click()
     }
+
+    async clickOnBtnSubmit() {
+        await this.btnSubmit.click()
+    }
 }

@@ -22,6 +22,7 @@ test.describe('Register', () => {
         await registerPage.selectCricket()
         await registerPage.selectHockey()
         await registerPage.clickOnBtnRefresh()
+        await registerPage.clickOnBtnSubmit()
     })
 })
 
