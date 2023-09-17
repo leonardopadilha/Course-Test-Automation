@@ -19,6 +19,9 @@ test.describe('Register', () => {
         await registerPage.fillEmail(user.EMAIL)
         await registerPage.fillPhone(user.PHONE)
         await registerPage.selectGender(gender.FEMALE)
+        await registerPage.selectCricket()
+        await registerPage.selectHockey()
+        await registerPage.clickOnBtnRefresh()
     })
 })
 

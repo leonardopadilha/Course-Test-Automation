@@ -82,4 +82,8 @@ export class RegisterPage {
     async selectHockey() {
         await this.hockey.click()
     }
+    
+    async clickOnBtnRefresh() {
+        await this.btnRefresh.click()
+    }
 }
