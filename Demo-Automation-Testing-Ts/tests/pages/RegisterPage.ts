@@ -90,4 +90,16 @@ export class RegisterPage {
     async clickOnBtnSubmit() {
         await this.btnSubmit.click()
     }
+
+    async assertMessage(message: string) {
+        const validationMessage = await this.firstName.evaluate(
+            (e) => (e as HTMLInputElement).validationMessage)
+
+        expect(validationMessage).toEqual(message)
+    }
+
+    async assertURL() {
+        await expect(this.page).toHaveURL(this.registerPageUrl)
+    }
+
 }
