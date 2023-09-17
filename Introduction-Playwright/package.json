@@ -6,12 +6,14 @@
   "scripts": {
     "test:e2e": "npx playwright test tests/  --project=Chromium --headed",
     "test:smoke": "npx playwright test tests-examples/ --grep @smoke --project=chromium",
-    "test:non-smoke": "npx playwright test tests-examples/ --grep-invert @smoke --project=chromium"
+    "test:non-smoke": "npx playwright test tests-examples/ --grep-invert @smoke --project=chromium",
+    "test:e2e:debug": "npx playwright test tests/  --project=Chromium --headed --debug"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.18.1",
     "@playwright/test": "^1.36.2"
   }
 }
