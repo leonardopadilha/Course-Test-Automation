@@ -23,6 +23,8 @@ test.describe('Register', () => {
         await registerPage.selectHockey()
         await registerPage.clickOnBtnRefresh()
         await registerPage.clickOnBtnSubmit()
+        await registerPage.assertMessage('Preencha este campo.')
+        await registerPage.assertURL()
     })
 })
 
